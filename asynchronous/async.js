@@ -36,7 +36,7 @@ pickFruits().then(console.log); //총 7초 후 사과 + 바나나 출력
 async function fruitsPick() {
     const apple = await getApple();
     const banana = await getBanana();
-    return `${banana} + ${apple}`;
+    return `slow : ${banana} + ${apple}`;
 }
 fruitsPick().then(console.log); //총 7초 후 바나나 + 사과 출력
 
@@ -46,7 +46,7 @@ async function fruitsPickFast() {
     const bananaPromise = getBanana();
     const apple = await applePromise;
     const banana = await bananaPromise;
-    return `${banana} + ${apple}`;
+    return `fast : ${banana} + ${apple}`;
 }
 fruitsPickFast().then(console.log); //총 4초 후 바나나 + 사과 출력
 
